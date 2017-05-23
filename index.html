@@ -328,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/修改hexo主题/" itemprop="url" rel="index">
-                    <span itemprop="name">修改hexo主题</span>
+                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
+                    <span itemprop="name">搭建博客</span>
                   </a>
                 </span>
 
@@ -369,7 +369,9 @@
 <h2 id="NEXT主题下载"><a href="#NEXT主题下载" class="headerlink" title="NEXT主题下载"></a>NEXT主题下载</h2><h3 id="clone主题"><a href="#clone主题" class="headerlink" title="clone主题"></a>clone主题</h3><p>1.首先在你的站点目录的themes目录下面新建一个文件夹next，用来保存我们clone的主题.<br>2.cmd切换到站点目录下面（这个站点目录说的就是你存放博客的主目录，例如：E:\myBlog）,输入以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
 <p>3.等待clone完成，然后修改我们的站点配置文件_config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme:next</div></pre></td></tr></table></figure></p>
 <p>OK .到此主题切换完成，我们继续修改next主题当中的一些默认的东西。</p>
-<h2 id="更换主题默认"><a href="#更换主题默认" class="headerlink" title="更换主题默认"></a>更换主题默认</h2><h3 id="更换头像"><a href="#更换头像" class="headerlink" title="更换头像"></a>更换头像</h3><p>1.在主题文件下面找到source文件夹，在这个文件夹下面新建一个文件夹uploads，里面存放我们的头像avatar.png，这个头像你们随意设置，到时候配置 文件统一就可以，头像也可以是gif形式的。<br>2.在站点配置文件新添加一个属性avatar，值设置成头像的存储路径径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">avatar: /uploads/avatar.png</div></pre></td></tr></table></figure></p>
+<h2 id="更换主题默认"><a href="#更换主题默认" class="headerlink" title="更换主题默认"></a>更换主题默认</h2><h3 id="设置文章代码主题"><a href="#设置文章代码主题" class="headerlink" title="设置文章代码主题"></a>设置文章代码主题</h3><p>Next主题总共支持5种主题，默认主题是白色的normal。通过修改next主题下的_config.yml的highlight字段，来设置代码主题。</p>
+<p>本站点使用的是默认的主题。</p>
+<h3 id="更换头像"><a href="#更换头像" class="headerlink" title="更换头像"></a>更换头像</h3><p>1.在主题文件下面找到source文件夹，在这个文件夹下面新建一个文件夹uploads，里面存放我们的头像avatar.png，这个头像你们随意设置，到时候配置 文件统一就可以，头像也可以是gif形式的。<br>2.在站点配置文件新添加一个属性avatar，值设置成头像的存储路径径。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">avatar: /uploads/avatar.png</div></pre></td></tr></table></figure></p>
 <h3 id="修改主题的风格"><a href="#修改主题的风格" class="headerlink" title="修改主题的风格"></a>修改主题的风格</h3><p>修改主题配置文件的_config.yml文件的scheme属性，有三种风格，DaMiss选用的是Pisces，是左右类型的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Schemes</div><div class="line">#scheme: Pisces</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div></pre></td></tr></table></figure></p>
 <h3 id="修改主题语言"><a href="#修改主题语言" class="headerlink" title="修改主题语言"></a>修改主题语言</h3><p>1.next主题的所有语言配置文件都在\themes\next\languages文件夹下，可以看到中文对应的是zh-Hans.yml，英文对应的是en.yml 。<br>2.如果你希望自己的menu显示中文，就将你的站点的配置文件_config.yml里面language行进行如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: 叫我阿怡DaMiss</div><div class="line">subtitle: GOGoGOGood</div><div class="line">description: 德智体美全面发展的小红帽</div><div class="line">author: happyfyq</div><div class="line">language: zh-Hans   //中文</div><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure></p>
 <h3 id="修改首页目录"><a href="#修改首页目录" class="headerlink" title="修改首页目录"></a>修改首页目录</h3><p>(目录的顺序可以在主题配置文件_config.yml文件修改顺序）</p>
@@ -640,7 +642,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
