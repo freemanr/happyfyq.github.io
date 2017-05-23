@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/22/超详细搭建属于自己的博客-Git-Node-js-Hexo/index.html">
 <meta property="og:site_name" content="叫我阿怡DaMiss">
 <meta property="og:description" content="[TOC]前言      我一直有记笔记的习惯，方便自己需要的时候回头看看，主要自己现在还是个菜鸟，需要经常的回顾知识。我在CSDN也有账号，也写过博客，但是界面不友好，就没太大兴趣继续写了，一个偶然的机会，看见别人的博客主页面很好，很清晰。于是乎也想着自己搭建一个自己的博客，创造属于自己的分享天地。Ok，就这样开启了搭建博客之路，在这里我把经验分享给大家，希望大家也多多分享知识，IT行业需要多多">
-<meta property="og:updated_time" content="2017-05-23T05:59:49.968Z">
+<meta property="og:updated_time" content="2017-05-23T06:35:01.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="超详细搭建属于自己的博客-Git+Node.js+Hexo">
 <meta name="twitter:description" content="[TOC]前言      我一直有记笔记的习惯，方便自己需要的时候回头看看，主要自己现在还是个菜鸟，需要经常的回顾知识。我在CSDN也有账号，也写过博客，但是界面不友好，就没太大兴趣继续写了，一个偶然的机会，看见别人的博客主页面很好，很清晰。于是乎也想着自己搭建一个自己的博客，创造属于自己的分享天地。Ok，就这样开启了搭建博客之路，在这里我把经验分享给大家，希望大家也多多分享知识，IT行业需要多多">
@@ -351,10 +351,8 @@
 <h2 id="完成上述命令之后，我们在浏览器输入网址：http-localhost-4000-就可以看到我们本地新建的博客了，hexo默认的主题是landscape，修改主题我会继续在另一篇博客中讲解。"><a href="#完成上述命令之后，我们在浏览器输入网址：http-localhost-4000-就可以看到我们本地新建的博客了，hexo默认的主题是landscape，修改主题我会继续在另一篇博客中讲解。" class="headerlink" title="完成上述命令之后，我们在浏览器输入网址：http://localhost:4000/ 就可以看到我们本地新建的博客了，hexo默认的主题是landscape，修改主题我会继续在另一篇博客中讲解。"></a>完成上述命令之后，我们在浏览器输入网址：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以看到我们本地新建的博客了，hexo默认的主题是landscape，修改主题我会继续在另一篇博客中讲解。</h2><p>接下来我们看看我们本地初始化的博客的一个目录结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">myBlog:(刚才init博客的目录)</div><div class="line">     -.deploy_git</div><div class="line">     -node_modules</div><div class="line">     -scaffolds</div><div class="line">     -source           //里面存放的我们执行hexo new post &apos;XXX&apos;产生的博客</div><div class="line">     -themes           //主题文件夹，我们修改主题的时候会用到</div><div class="line">     -._config.yml.swp</div><div class="line">     -.gitignore</div><div class="line">     -.npmignore</div><div class="line">     -_config.yml      //站点文件，很重要，博客主页面的配置，还有上传到github都要用到</div><div class="line">     -db.json</div><div class="line">     -package.json</div></pre></td></tr></table></figure></p>
 <p>OK，以上所有内容仅限于在我们本地的修改，和使用。但是我们写博客的目的不仅限于自己看，还要分享给大家看，那么问题就来了，我们怎么样才能将我们本地博客搞到一个大家都可以用到的地方呢，DaMiss选择的是gitHub这个免费资源。还不知道gitHub是啥东东的小伙伴，可自行在百度搜索，一搜一大堆呢！OK，闲话少说，我们接着往下看…</p>
 <hr>
-<blockquote>
-<p>首先我们需要在gitHub官网上注册自己的账号和新建自己的仓库。（已经有账号的小伙伴可自行忽略申请账号）</p>
+<p><strong><em>首先我们需要在gitHub官网上注册自己的账号和新建自己的仓库。（已经有账号的小伙伴可自行忽略申请账号）</em></strong></p>
 <h3 id="5-申请gitHub账号"><a href="#5-申请gitHub账号" class="headerlink" title="5.申请gitHub账号"></a>5.申请gitHub账号</h3><p>官网地址：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 进行注册账号。<br>新建自己的仓库：注册账号之后，在页面的右上角有个+号，我们点开 new repository ，在这里着重强调一下仓库的名字的规则： yourgitHubname.gitHub.io这种格式的，否则会出现错误，比如DaMiss的gitHub账号是happyfyq ，那我的仓库名字就是happyfyq.github.io.其他默认选择，然后点击 create repository，ok完成!</p>
-</blockquote>
 <h3 id="6-创建密钥"><a href="#6-创建密钥" class="headerlink" title="6.创建密钥"></a>6.创建密钥</h3><p>创建密钥的目的是：SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了。</p>
 <p>接下来命令操作需要在git bash 环境下使用，我们右键桌面空白的地方，进入 Git Bash Here  ，然后输入一下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &apos;你的邮箱&apos;   //这里的邮箱是注册github账号的时候用的邮箱</div></pre></td></tr></table></figure></p>
 <p>然后一直按回车，成功之后我们根据提示的保存路径找到一个 id _rsa.pub的文件，复制里面的全部内容。然后登陆的github账号，找到右上角的图标，打开settings,接着找到左面的sshkey接着点击右面的new ssh key，然后把我们刚才复制的东西copy进去，这个密钥的标题随便起。OK密钥创建完成。</p>
