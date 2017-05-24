@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/22/超详细搭建属于自己的博客-Git-Node-js-Hexo/index.html">
 <meta property="og:site_name" content="叫我阿怡DaMiss">
 <meta property="og:description" content="前言      我一直有记笔记的习惯，方便自己需要的时候回头看看，主要自己现在还是个菜鸟，需要经常的回顾知识。我在CSDN也有账号，也写过博客，但是界面不友好，就没太大兴趣继续写了，一个偶然的机会，看见别人的博客主页面很好，很清晰。于是乎也想着自己搭建一个自己的博客，创造属于自己的分享天地。Ok，就这样开启了搭建博客之路，在这里我把经验分享给大家，希望大家也多多分享知识，IT行业需要多多交流，不可">
-<meta property="og:updated_time" content="2017-05-23T09:42:43.705Z">
+<meta property="og:updated_time" content="2017-05-24T06:11:27.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="超详细搭建属于自己的博客-Git+Node.js+Hexo">
 <meta name="twitter:description" content="前言      我一直有记笔记的习惯，方便自己需要的时候回头看看，主要自己现在还是个菜鸟，需要经常的回顾知识。我在CSDN也有账号，也写过博客，但是界面不友好，就没太大兴趣继续写了，一个偶然的机会，看见别人的博客主页面很好，很清晰。于是乎也想着自己搭建一个自己的博客，创造属于自己的分享天地。Ok，就这样开启了搭建博客之路，在这里我把经验分享给大家，希望大家也多多分享知识，IT行业需要多多交流，不可">
@@ -380,8 +380,10 @@
 <p><strong><em>首先我们需要在gitHub官网上注册自己的账号和新建自己的仓库。（已经有账号的小伙伴可自行忽略申请账号）</em></strong></p>
 <hr>
 <h3 id="申请gitHub账号"><a href="#申请gitHub账号" class="headerlink" title="申请gitHub账号"></a>申请gitHub账号</h3><p>官网地址：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 进行注册账号。<br>新建自己的仓库：注册账号之后，在页面的右上角有个+号，我们点开 new repository ，在这里着重强调一下仓库的名字的规则： yourgitHubname.gitHub.io这种格式的，否则会出现错误，比如DaMiss的gitHub账号是happyfyq ，那我的仓库名字就是happyfyq.github.io.其他默认选择，然后点击 create repository，ok完成!</p>
-<h3 id="创建密钥"><a href="#创建密钥" class="headerlink" title="创建密钥"></a>创建密钥</h3><p>创建密钥的目的是：SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了。</p>
-<p>接下来命令操作需要在git bash 环境下使用，我们右键桌面空白的地方，进入 Git Bash Here  ，然后输入一下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &apos;你的邮箱&apos;   //这里的邮箱是注册github账号的时候用的邮箱</div></pre></td></tr></table></figure></p>
+<h3 id="创建密钥"><a href="#创建密钥" class="headerlink" title="创建密钥"></a>创建密钥</h3><p>创建密钥的目的是：SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了。  </p>
+<p>我们在设置密钥的时候，首先要创建git的用户名和密码,进去git bash(用户名和github一样，邮箱也是如此)</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;happyfyq&quot;   </div><div class="line">$ git config --global user.email 1191994468@qq.com</div></pre></td></tr></table></figure>
+<p>接下来我们右键桌面空白的地方，进入 Git Bash Here  ，然后输入一下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &apos;你的邮箱&apos;   //这里的邮箱是注册github账号的时候用的邮箱</div></pre></td></tr></table></figure></p>
 <p>然后一直按回车，成功之后我们根据提示的保存路径找到一个 id _rsa.pub的文件，复制里面的全部内容。然后登陆的github账号，找到右上角的图标，打开settings,接着找到左面的sshkey接着点击右面的new ssh key，然后把我们刚才复制的东西copy进去，这个密钥的标题随便起。OK密钥创建完成。</p>
 <hr>
 <p><strong><em>接下来我们修改站点目录的配置文件：_config.yml用来上传自己的博客到github上面</em></strong><br>主要就是修改下面的内容，打开文件拉倒最底部，修改成我这个样子就好了。repo的地址可以在你的github仓库主页面的找到，我们使用密钥的方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:happyfyq/happyfyq.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
@@ -555,6 +557,20 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://freemanr.github.io" title="freeman博客" target="_blank">freeman博客</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         

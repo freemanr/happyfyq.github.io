@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/23/修改Hexo主题-Next/index.html">
 <meta property="og:site_name" content="叫我阿怡DaMiss">
 <meta property="og:description" content="前言在《超详细搭建自己的博客》里面我们已经可以把自己的博客提交到github上面，但是hexo默认的主题不是很好看，所以想着更换一下主题，在网上也搜了好多教程，结合自己的理解，在这里在总结一篇比较详细，比较全面的更换主题的博文，以后如果在发现可以更换的地方，DaMiss会及时更新博文的。  NEXT主题下载clone主题1.首先在你的站点目录的themes目录下面新建一个文件夹next，用来保存我">
-<meta property="og:updated_time" content="2017-05-23T10:30:46.692Z">
+<meta property="og:updated_time" content="2017-05-24T08:20:46.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改Hexo主题-Next">
 <meta name="twitter:description" content="前言在《超详细搭建自己的博客》里面我们已经可以把自己的博客提交到github上面，但是hexo默认的主题不是很好看，所以想着更换一下主题，在网上也搜了好多教程，结合自己的理解，在这里在总结一篇比较详细，比较全面的更换主题的博文，以后如果在发现可以更换的地方，DaMiss会及时更新博文的。  NEXT主题下载clone主题1.首先在你的站点目录的themes目录下面新建一个文件夹next，用来保存我">
@@ -385,6 +385,9 @@
 <p>2.在 source/about 目录的 index.md 中修改（里面可以写一些关于自己的介绍）:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 不着急，得小范老师完善</div><div class="line">date: 2017-05-22 16:27:49</div><div class="line">---</div></pre></td></tr></table></figure></p>
 <p>3.在主题的 _config.yml 中取消注释:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">about: /about</div></pre></td></tr></table></figure></p>
 <h3 id="修改站点LOGO"><a href="#修改站点LOGO" class="headerlink" title="修改站点LOGO"></a>修改站点LOGO</h3><p>1.通过网站favicon在线制作<a href="http://tool.lu/favicon/制作favicon图片，logo最好设置32*32。" target="_blank" rel="external">http://tool.lu/favicon/制作favicon图片，logo最好设置32*32。</a><br>2.next主题：将图片放在next主题source/images目录下<br>3.在next主题配置文件中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">favicon: images/favicon.ico</div></pre></td></tr></table></figure></p>
+<h3 id="更改NexT主题的背景图片"><a href="#更改NexT主题的背景图片" class="headerlink" title="更改NexT主题的背景图片"></a>更改NexT主题的背景图片</h3><p>1.首先找到一个背景图片放到 hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; images 的路径下。<br>2.hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; css -&gt; _custom ，找到路径下的custom.styl文件，在文件的最上方加上一代码-body { background:url(/images/backGround.jpg);} 就完事了，但是想要保证图片平铺并且充满屏幕不随屏幕滚动需要再添加点css样式，如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">body &#123; </div><div class="line">margin:0;</div><div class="line">background:url(/images/backGround.jpg);</div><div class="line">background-size:100% 100%;</div><div class="line">background-attachment: fixed;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="添加友情链接"><a href="#添加友情链接" class="headerlink" title="添加友情链接"></a>添加友情链接</h3><p>打开站点的配置文件_config.yml，修改下面的属性,例如这个freeman博客是显示在页面上的title。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Blog rolls</div><div class="line">links_title: 友情链接</div><div class="line">links_layout: block</div><div class="line">#links_layout: inline</div><div class="line">links:</div><div class="line">  freeman博客: &quot;https://freemanr.github.io&quot;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -548,6 +551,20 @@
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://freemanr.github.io" title="freeman博客" target="_blank">freeman博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -564,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NEXT主题下载"><span class="nav-number">1.</span> <span class="nav-text">NEXT主题下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clone主题"><span class="nav-number">1.1.</span> <span class="nav-text">clone主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题默认"><span class="nav-number">2.</span> <span class="nav-text">更换主题默认</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置文章代码主题"><span class="nav-number">2.1.</span> <span class="nav-text">设置文章代码主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换头像"><span class="nav-number">2.2.</span> <span class="nav-text">更换头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题的风格"><span class="nav-number">2.3.</span> <span class="nav-text">修改主题的风格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改代码的字体大小"><span class="nav-number">2.4.</span> <span class="nav-text">修改代码的字体大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题语言"><span class="nav-number">2.5.</span> <span class="nav-text">修改主题语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改首页目录"><span class="nav-number">2.6.</span> <span class="nav-text">修改首页目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.6.1.</span> <span class="nav-text">添加分类页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.6.2.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加关于页面"><span class="nav-number">2.6.3.</span> <span class="nav-text">添加关于页面</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改站点LOGO"><span class="nav-number">2.7.</span> <span class="nav-text">修改站点LOGO</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NEXT主题下载"><span class="nav-number">1.</span> <span class="nav-text">NEXT主题下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clone主题"><span class="nav-number">1.1.</span> <span class="nav-text">clone主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题默认"><span class="nav-number">2.</span> <span class="nav-text">更换主题默认</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置文章代码主题"><span class="nav-number">2.1.</span> <span class="nav-text">设置文章代码主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换头像"><span class="nav-number">2.2.</span> <span class="nav-text">更换头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题的风格"><span class="nav-number">2.3.</span> <span class="nav-text">修改主题的风格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改代码的字体大小"><span class="nav-number">2.4.</span> <span class="nav-text">修改代码的字体大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题语言"><span class="nav-number">2.5.</span> <span class="nav-text">修改主题语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改首页目录"><span class="nav-number">2.6.</span> <span class="nav-text">修改首页目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.6.1.</span> <span class="nav-text">添加分类页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.6.2.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加关于页面"><span class="nav-number">2.6.3.</span> <span class="nav-text">添加关于页面</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改站点LOGO"><span class="nav-number">2.7.</span> <span class="nav-text">修改站点LOGO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改NexT主题的背景图片"><span class="nav-number">2.8.</span> <span class="nav-text">更改NexT主题的背景图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加友情链接"><span class="nav-number">2.9.</span> <span class="nav-text">添加友情链接</span></a></li></ol></li></ol></div>
             
 
           </div>
