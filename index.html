@@ -392,6 +392,8 @@
 <h3 id="更改NexT主题的背景图片"><a href="#更改NexT主题的背景图片" class="headerlink" title="更改NexT主题的背景图片"></a>更改NexT主题的背景图片</h3><p>1.首先找到一个背景图片放到 hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; images 的路径下。<br>2.hexo（hexo工程文件）-&gt; themes -&gt; next -&gt; source -&gt; css -&gt; _custom ，找到路径下的custom.styl文件，在文件的最上方加上一代码-body { background:url(/images/backGround.jpg);} 就完事了，但是想要保证图片平铺并且充满屏幕不随屏幕滚动需要再添加点css样式，如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">body &#123; </div><div class="line">margin:0;</div><div class="line">background:url(/images/backGround.jpg);</div><div class="line">background-size:100% 100%;</div><div class="line">background-attachment: fixed;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="添加友情链接"><a href="#添加友情链接" class="headerlink" title="添加友情链接"></a>添加友情链接</h3><p>打开站点的配置文件_config.yml，修改下面的属性,例如这个freeman博客是显示在页面上的title。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Blog rolls</div><div class="line">links_title: 友情链接</div><div class="line">links_layout: block</div><div class="line">#links_layout: inline</div><div class="line">links:</div><div class="line">  freeman博客: &quot;https://freemanr.github.io&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="删除NexT主题页脚的部分内容"><a href="#删除NexT主题页脚的部分内容" class="headerlink" title="删除NexT主题页脚的部分内容"></a>删除NexT主题页脚的部分内容</h3><p>打开/themes/next/layout/_partials/footer.swig文件，删除掉class 为powered-by的div和theme-info的div即可，删掉之后的code是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;!-- 上面这部分是设置访问人数的，如果你没有设置的话，是没有的。 --&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;copyright&quot; &gt;</div><div class="line">  &#123;% set current = date(Date.now(), &quot;YYYY&quot;) %&#125;</div><div class="line">  &amp;copy; &#123;% if theme.since and theme.since != current %&#125; &#123;&#123; theme.since &#125;&#125; - &#123;% endif %&#125;</div><div class="line">  &lt;span itemprop=&quot;copyrightYear&quot;&gt;&#123;&#123; current &#125;&#125;&lt;/span&gt;</div><div class="line">  &lt;span class=&quot;with-love&quot;&gt;</div><div class="line">    &lt;i class=&quot;fa fa-&#123;&#123; theme.authoricon &#125;&#125;&quot;&gt;&lt;/i&gt;</div><div class="line">  &lt;/span&gt;</div><div class="line">  &lt;span class=&quot;author&quot; itemprop=&quot;copyrightHolder&quot;&gt;&#123;&#123; config.author &#125;&#125;&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 
           
         
@@ -727,18 +729,6 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">happyfyq</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
 </div>
 
 
