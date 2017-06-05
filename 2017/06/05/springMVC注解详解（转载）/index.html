@@ -137,8 +137,6 @@
 </head>
 
 
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
@@ -432,7 +430,7 @@
 <p>   在上面的代码中我们可以看到在标记variable1 为path 变量的时候我们使用的是@PathVariable ，而在标记variable2 的时候使用的是@PathVariable(“variable2”) 。这两者有什么区别呢？第一种情况就默认去URI 模板中找跟参数名相同的变量，但是这种情况只有在使用debug 模式进行编译的时候才可以，而第二种情况是明确规定使用的就是URI 模板中的variable2 变量。当不是使用debug 模式进行编译，或者是所需要使用的变量名跟参数名不相同的时候，就要使用第二种方式明确指出使用的是URI 模板中的哪个变量。</p>
 <p> 除了在请求路径中使用URI 模板，定义变量之外，<strong>@RequestMapping 中还支持通配符“* ”</strong>。如下面的代码我就可以使用/myTest/whatever/wildcard.do 访问到Controller 的testWildcard 方法。如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="meta">@RequestMapping</span> ( <span class="string">"/myTest"</span> )</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyController</span> </span>&#123;</div><div class="line">    <span class="meta">@RequestMapping</span> ( <span class="string">"*/wildcard"</span> )</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">testWildcard</span><span class="params">()</span> </span>&#123;</div><div class="line">       System. out .println( <span class="string">"wildcard------------"</span> );</div><div class="line">       <span class="keyword">return</span> <span class="string">"wildcard"</span> ;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>当@RequestParam中没有指定参数名称时，Spring 在代码是debug 编译的情况下会默认取更方法参数同名的参数，如果不是debug 编译的就会报错。</p>
+<p>当@PathVariable中没有指定参数名称时，Spring 在代码是debug 编译的情况下会默认取更方法参数同名的参数，如果不是debug 编译的就会报错。</p>
 <h3 id="使用-RequestMapping-的一些高级用法"><a href="#使用-RequestMapping-的一些高级用法" class="headerlink" title="使用 @RequestMapping 的一些高级用法"></a>使用 @RequestMapping 的一些高级用法</h3><h4 id="params属性"><a href="#params属性" class="headerlink" title="params属性"></a>params属性</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span> (value= <span class="string">"testParams"</span> , params=&#123; <span class="string">"param1=value1"</span> , <span class="string">"param2"</span> , <span class="string">"!param3"</span> &#125;)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">testParams</span><span class="params">()</span> </span>&#123;</div><div class="line">       System. out .println( <span class="string">"test Params..........."</span> );</div><div class="line">       <span class="keyword">return</span> <span class="string">"testParams"</span> ;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>用@RequestMapping 的params 属性指定了三个参数，这些参数都是针对请求参数而言的，它们分别表示参数param1 的值必须等于value1 ，参数param2 必须存在，值无所谓，参数param3 必须不存在，只有当请求/testParams.do 并且满足指定的三个参数条件的时候才能访问到该方法。所以当请求/testParams.do?param1=value1&amp;param2=value2 的时候能够正确访问到该testParams 方法，当请求/testParams.do?param1=value1&amp;param2=value2&amp;param3=value3 的时候就不能够正常的访问到该方法，因为在@RequestMapping 的params 参数里面指定了参数param3 是不能存在的。</p>
 <h4 id="method属性"><a href="#method属性" class="headerlink" title="method属性"></a>method属性</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span> (value= <span class="string">"testMethod"</span> , method=&#123;RequestMethod. GET , RequestMethod. DELETE &#125;)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">testMethod</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="string">"method"</span> ;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
@@ -889,8 +887,6 @@
   
 
 
-  
-
 
 
 
@@ -918,9 +914,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
