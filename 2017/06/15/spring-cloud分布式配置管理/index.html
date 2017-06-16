@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="[TOC] 前言分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。** 现状在传统开发中我们往往需要自己开发“配置管理">
+<meta name="description" content="前言分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。 现状在传统开发中我们往往需要自己开发“配置管理服务器”，你可以">
 <meta name="keywords" content="spring-cloud 分布式管理配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring-cloud分布式配置管理">
 <meta property="og:url" content="http://yoursite.com/2017/06/15/spring-cloud分布式配置管理/index.html">
 <meta property="og:site_name" content="叫我范小晴">
-<meta property="og:description" content="[TOC] 前言分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。** 现状在传统开发中我们往往需要自己开发“配置管理">
+<meta property="og:description" content="前言分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。 现状在传统开发中我们往往需要自己开发“配置管理服务器”，你可以">
 <meta property="og:image" content="http://oqhkn28th.bkt.clouddn.com/7S%29%7D1BF%7D7K4JODK97$MHX05.png">
 <meta property="og:updated_time" content="2017-06-15T07:49:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring-cloud分布式配置管理">
-<meta name="twitter:description" content="[TOC] 前言分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。** 现状在传统开发中我们往往需要自己开发“配置管理">
+<meta name="twitter:description" content="前言分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。 现状在传统开发中我们往往需要自己开发“配置管理服务器”，你可以">
 <meta name="twitter:image" content="http://oqhkn28th.bkt.clouddn.com/7S%29%7D1BF%7D7K4JODK97$MHX05.png">
 
 
@@ -386,19 +386,18 @@
       
 
       
-        <p>[TOC]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。**</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>分布式配置管理应该是分布式系统和微服务应用的第一步。想象一下如果你有几十个服务或应用需要配置，而且每个服务还分为开发、测试、生产等不同维度的配置，那工作量是相当大的，而且还容易出错。如果能把各个应用的配置信息集中管理起来，使用一套机制或系统来管理，那么将极大的提高系统开发的生产效率，同时也会提高系统开发环境和生产环境运行的一致性。</p>
 <h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><p>在传统开发中我们往往需要自己开发“配置管理服务器”，你可以使用redis、ldap、zookeeper、db等来存放统一配置信息，然后开发一个管理界面来进行管理。传统的做法没什么问题，和spring cloud所提供的配置管理方案相比，就是前者需要自己开发，而后者直接简单使用现成的组件即可。当然还有很重要的一点，spring 配置管理模块由于是spring boot核心来实现的，因此做了大量的工作，<strong>可以把一些启动参数进行外部配置</strong>，这在传统的方案中是很难办到的，因为涉及到要改写第三方组件的问题，难度很大。比如web应用的绑定端口，传统应用只能在tomcat配置文件里改，而spring cloud却可以放到远程，类似的还有数据库连接、安全框架配置等。</p>
 <p>　　要使用spring cloud分布式配置文件总体上分为3个大的步骤，首选你需要创建存放配置文件的仓库，然后创建一个配置文件服务器，该服务器将配置文件信息转化为rest接口数据，然后创建一个应用服务，该服务演示使用分布式配置文件信息。</p>
 <h2 id="第一步：创建配置文件存放仓库"><a href="#第一步：创建配置文件存放仓库" class="headerlink" title="第一步：创建配置文件存放仓库"></a>第一步：创建配置文件存放仓库</h2><p>Spring cloud使用git或svn存放配置文件，默认情况下使用git，因此你需要安装git私服或者直接使用互联网上的github或者git.oschina，这里推荐使用git.oschina。本文示例使用的是git，在gir资源库路径下面创建一个文件夹cloud-config-repo，文件夹下面放置我们的配置文件。</p>
 <p> znyx-dataifac-dboracle-dev.properties</p>
 <p>znyx-dataifac-dboracle-test.properties</p>
-<p>一个是生产环境的配置文件，一个是测试环境的配置文件，以后缀 dev和text区分。</p>
+<p>一个是生产环境的配置文件，一个是测试环境的配置文件，以后缀 dev和test区分。</p>
 <h2 id="第二步：创建spring-cloud配置服务器"><a href="#第二步：创建spring-cloud配置服务器" class="headerlink" title="第二步：创建spring cloud配置服务器"></a>第二步：创建spring cloud配置服务器</h2><p>配置文件仓库创建好了后，就需要创建配置管理服务器，如前所述该服务器只是将配置文件转换为rest接口服务，不做其它用途。这个服务器的功能也是spring cloud提供的，所以我们只需要引入相关jar包，稍微设置一下即可。创建该服务应用，你需要首选创建一个空的maven工程.怎么创建这里就不做介绍了。</p>
 <p>大家都知道spring-boot的启动类，应该放在主目录下面：</p>
 <p><img src="http://oqhkn28th.bkt.clouddn.com/7S%29%7D1BF%7D7K4JODK97$MHX05.png" alt=""></p>
 <p>然后在这个工程中增加一个类，命名为：ConfigServerApplication，代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@SpringBootApplication</span></div><div class="line"></div><div class="line"> <span class="comment">//使用该注解标志这个应用是一个配置服务器</span></div><div class="line">　　<span class="meta">@EnableConfigServer</span></div><div class="line"></div><div class="line">　　<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigServerApplication</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">     　　　　SpringApplication.run(ConfigServerApplication.class, args);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">　　&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@SpringBootApplication</span></div><div class="line"></div><div class="line"> <span class="comment">//使用该注解标志这个应用是一个配置服务器</span></div><div class="line">　　<span class="meta">@EnableConfigServer</span></div><div class="line"></div><div class="line">　　<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigServerApplication</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">     　　　　SpringApplication.run(ConfigServerApplication.class, args);</div><div class="line">        &#125;</div><div class="line">　　&#125;</div></pre></td></tr></table></figure>
 <p>　可以看到，我们只需要用@EnableConfigServer激活该应用为配置文件服务器即可。如此以来该应用启动后就会完成前面提到的功能，即：读取远程配置文件，转换为rest接口服务。</p>
 <p>然后在src/main/resources 下面的application.properties中配置读取远程仓库配置文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">　 //配置本配置服务器启动端口为8888</div><div class="line">　  server.port=8888</div><div class="line">//配置远程仓库文件路径</div><div class="line">　　spring.cloud.config.server.git.uri=https://git.oschina.net/zhou666/spring-cloud-7simple.git</div><div class="line">//存放配置文件的文件夹</div><div class="line">　　spring.cloud.config.server.git.searchPaths=cloud-config-repo</div></pre></td></tr></table></figure>
@@ -421,6 +420,7 @@
 <p> @Value(“${my.message}”)</p>
 <p>private String message；</p>
 <p>此时属性message的属性值就是hellword，这个@Value注解也可以取本应用服务器的配置文件</p>
+<p>【注意】我们本地去远程资源库取配置文件的时候，只能一次性取一个。</p>
 <h2 id="对于spring-boot的application-properties-application-yml-和bootStrap-properties-bootStrap-yml-理解"><a href="#对于spring-boot的application-properties-application-yml-和bootStrap-properties-bootStrap-yml-理解" class="headerlink" title="对于spring-boot的application.properties(application.yml)和bootStrap.properties(bootStrap.yml)理解"></a>对于spring-boot的application.properties(application.yml)和bootStrap.properties(bootStrap.yml)理解</h2><p>好多人对于这两个配置文件理解不来，原因就是为什么要分成两个配置文件呢，一个不行吗，这样以来哪个配置文件优先级别高呢，我在官网的文档里面找到这样一段描述：（翻译之后）</p>
 <p>Spring Cloud会创建一个<code>Bootstrap Context</code>，作为Spring应用的<code>Application Context</code>的父上下文。初始化的时候，<code>Bootstrap Context</code>负责从外部源加载配置属性并解析配置。这两个上下文共享一个从外部获取的<code>Environment</code>。<code>Bootstrap</code>属性有高优先级，默认情况下，它们不会被本地配置覆盖。 <code>Bootstrap context</code>和<code>Application Context</code>有着不同的约定，所以新增了一个<code>bootstrap.yml</code>文件，而不是使用<code>application.yml</code> (或者<code>application.properties</code>)。保证<code>Bootstrap Context</code>和<code>Application Context</code>配置的分离。</p>
 <p>看到网上还有的人说：</p>
